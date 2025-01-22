@@ -35,7 +35,7 @@ const MovieComponent = () => {
 
   return (
     <>
-      <div className="container mx-auto text-white">
+      <div className="container mx-auto  text-white">
         <Navbar />
       </div>
       <div className="text-white">
