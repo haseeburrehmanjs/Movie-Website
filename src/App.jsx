@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { configDotenv } from "dotenv";
-import Navbar from "./components/universal/home-page-related/navbar";
+import Navbar from "./components/home-page-related/navbar";
 
 const MovieComponent = () => {
   const [movies, setMovies] = useState("");
@@ -44,7 +43,6 @@ const MovieComponent = () => {
           <div className="flex justify-between items-center flex-wrap">
             {movies.results.map((item, index) => (
               // console.log(item.backdrop_path)
-
               <div key={index} className="w-[320px]">
                 <div className="w-[300px] h-[350px] bg-contain">
                   <img
@@ -56,7 +54,7 @@ const MovieComponent = () => {
                 <div>
                   <h1>{item.title}</h1>
                   <h1>original_language: "{item.original_language}"</h1>
-                  <p className="">{item.overview}</p>
+                  <p className="text-xs">{item.overview}</p>
                 </div>
               </div>
             ))}
